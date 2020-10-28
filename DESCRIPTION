@@ -1,11 +1,12 @@
 Package: covid19Tracker
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Track coronavirus(COVID-19) cases all over the world
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(person("Alimohammad", "Movahedian", email = "am.movahedian1998@gmail.com", role = c("cre","aut"))) Movahedian
+Maintainer: am.movahedian1998@gmail.com
+Description: Daily track and plot of coronavirus cases around the world
+License: MIT
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/PlasterPate/covid19Tracker
+BugReports: https://github.com/PlasterPate/covid19Tracker/issues
