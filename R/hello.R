@@ -19,3 +19,7 @@ hello <- function() {
 
 
 usethis::use_git()
+usethis::use_github()
+usethis::browse_github_token()
+usethis::edit_r_environ()
+usethis::git_sitrep()
