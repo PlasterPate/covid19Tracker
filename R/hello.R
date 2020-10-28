@@ -17,12 +17,12 @@ hello <- function() {
   print("Hello, world!")
 }
 
-available::available("covid19Tracker", browse = FALSE)
+# available::available("covid19Tracker", browse = FALSE)
+#
+# usethis::use_git()
+# usethis::use_github()
+# usethis::browse_github_token()
+# usethis::edit_r_environ()
+# usethis::git_sitrep()
 
-usethis::use_git()
-usethis::use_github()
-usethis::browse_github_token()
-usethis::edit_r_environ()
-usethis::git_sitrep()
 
-devtools::install()
