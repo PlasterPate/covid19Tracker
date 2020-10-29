@@ -17,6 +17,7 @@ hello <- function() {
   print("Hello, world!")
 }
 
+
 # available::available("covid19Tracker", browse = FALSE)
 #
 # usethis::use_git()

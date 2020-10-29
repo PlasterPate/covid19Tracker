@@ -9,3 +9,20 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/PlasterPate/covid19Tracker
 BugReports: https://github.com/PlasterPate/covid19Tracker/issues
+Imports: 
+    dplyr,
+    RCurl,
+    roxygen2,
+    magrittr,
+    lubridate,
+    rnaturalearth,
+    sf,
+    rgeos,
+    rnaturalearthdata,
+    ggplot2,
+    ggmap,
+    readr,
+    scales,
+    tidyr
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
