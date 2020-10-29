@@ -15,6 +15,6 @@ confirmed and death cases of all countries in a tidy format.
 It also contains geographic coordinates(Lat,Long) for each Region
 }
 \examples{
-\dontrun{timeSeries <- fetchData()}
+timeSeries <- fetchData()
 
 }

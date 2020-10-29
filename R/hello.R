@@ -16,7 +16,7 @@
 hello <- function() {
   print("Hello, world!")
 }
-
+?covid19Tracker::plotWorldMap
 
 # available::available("covid19Tracker", browse = FALSE)
 #

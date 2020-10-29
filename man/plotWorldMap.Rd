@@ -17,7 +17,8 @@ This function plots a choropleth map of the world showing the spread
 of coronavirus in a specific time period
 }
 \examples{
-\dontrun{plotWorldMap(c("2020/03/26","2020/05/12"), type = "Confirmed")}
-\dontrun{plotWorldMap(c("2020/06/21"), type = "Death")}
+plotWorldMap(c("2020/03/26","2020/05/12"), type = "Confirmed")
+
+plotWorldMap(c("2020/06/21"), type = "Death")
 
 }

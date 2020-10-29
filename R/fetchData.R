@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{timeSeries <- fetchData()}
+#' timeSeries <- fetchData()
 #'
 fetchData <- function(){
   # Read database of confirmed cases and death cases of coronavirus from JHU github

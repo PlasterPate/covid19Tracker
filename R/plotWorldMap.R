@@ -11,8 +11,9 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{plotWorldMap(c("2020/03/26","2020/05/12"), type = "Confirmed")}
-#' \dontrun{plotWorldMap(c("2020/06/21"), type = "Death")}
+#' plotWorldMap(c("2020/03/26","2020/05/12"), type = "Confirmed")
+#'
+#' plotWorldMap(c("2020/06/21"), type = "Death")
 #'
 plotWorldMap <- function(dateRange, type){
   # Throw exception if dateRange wasn't in correct format
@@ -74,15 +75,15 @@ plotWorldMap <- function(dateRange, type){
     dplyr::filter(!is.na(Lat))
 
   # Plot choropleth map of the world based on type of casees
-  ggplot() +
-    geom_sf(data = worldData, aes(fill = !!sym(type))) +
-    scale_fill_stepsn(colors = c("white", "yellow", "red"), show.limits = T,
+  ggplot2::ggplot() +
+    ggplot2::geom_sf(data = worldData, aes(fill = !!sym(type))) +
+    ggplot2::scale_fill_stepsn(colors = c("white", "yellow", "red"), show.limits = T,
                       na.value = "gray", oob = scales::squish_infinite,
-                      values = scales::rescale(scales::log_breaks(n = 6, base = 2)(c(1,max(worldData$Confirmed))), to = c(0,1)),
+                      values = scales::rescale(scales::log_breaks(n = 6, base = 2)(c(1,max(worldData[[type]]))), to = c(0,1)),
                       breaks = scales::log_breaks(n = 6, base = 2)(c(1,max(worldData[[type]])))) +
-    labs(x = "Longitude", y = "Latitude") +
-    ggtitle(paste(type, "Cases Around The World"), subtitle = paste("From", from_date, "To", to_date)) +
-    theme_minimal()
+    ggplot2::labs(x = "Longitude", y = "Latitude") +
+    ggplot2::ggtitle(paste(type, "Cases Around The World"), subtitle = paste("From", from_date, "To", to_date)) +
+    ggplot2::theme_minimal()
 }
 
 # plotWorldMap(c("2020/03/26","2020/05/12"), type = "Confirmed")
