@@ -1,10 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# covid19Tracker
+# covid19Tracker <img src='man/figures/logo.png' align="right" height="220" />
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/covid19Tracker)](https://CRAN.R-project.org/package=covid19Tracker)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![License:
+MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 <!-- badges: end -->
 
 The goal of covid19Tracker is to facilitate exploration of Coronavirus
@@ -16,7 +22,7 @@ The dataset includes new cases, cumulative cases, new deaths and
 cumulative deaths for each day. It also contains geographical
 coordinates(Lat,Long) for each country.
 
-This package provide functions to:
+This package provides functions to:
 
   - View full dataset in a tidy format
   - Plot total cases in a selected period of time on the world map

@@ -13,16 +13,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-# covid19Tracker
+# covid19Tracker <img src='man/figures/logo.png' align="right" height="220" />
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/covid19Tracker)](https://CRAN.R-project.org/package=covid19Tracker)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 <!-- badges: end -->
 
 The goal of covid19Tracker is to facilitate exploration of Coronavirus disease (COVID-19) dataset. The dataset is provided by [JHU CSSE COVID-19 Data](https://github.com/CSSEGISandData/COVID-19) and is updated everyday.
 
 The dataset includes new cases, cumulative cases, new deaths and cumulative deaths for each day. It also contains geographical coordinates(Lat,Long) for each country.
 
-This package provide functions to:
+This package provides functions to:
 
 + View full dataset in a tidy format
 + Plot total cases in a selected period of time on the world map
@@ -61,7 +64,7 @@ options(scipen = 999)
 plotWorldMap(dateRange = c("2020-09-01", "2020-10-30"), type = "Confirmed")
 ```
 
-```{r example3}
+```{r example3, message=FALSE, warning=FALSE, error=FALSE, fig.width=10}
 plotCountryTimeline(dateRange = c("2020-01-01", "2020-12-29"), country = "Iran")
 ```
 
