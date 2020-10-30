@@ -41,7 +41,7 @@ You can install the development version from
 devtools::install_github("PlasterPate/covid19Tracker")
 ```
 
-## Example
+## Examples
 
 ### Getting data
 
@@ -66,7 +66,6 @@ head(dataset)
 ``` r
 library(covid19Tracker)
 plotWorldMap(dateRange = c("2020-09-01", "2020-09-30"), type = "Confirmed")
-#> [1] 7
 ```
 
 <img src="man/figures/README-example2-1.png" width="100%" />
