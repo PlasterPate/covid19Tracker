@@ -43,14 +43,19 @@ plotCountryTimeline <- function(dateRange, country){
   countryTimeline %>%
     ggplot2::ggplot(ggplot2::aes(x = Date, y = Count, color = Case)) +
     ggplot2::geom_line(size = 1.3) +
-    ggplot2::scale_x_date(breaks = scales::pretty_breaks(10)) +
+    ggplot2::scale_x_date(breaks = scales::pretty_breaks(10),
+                          guide = ggplot2::guide_axis(angle = 45, check.overlap = T)) +
     ggplot2::scale_y_continuous(breaks = scales::pretty_breaks(8)) +
     ggplot2::labs(x = "\nDate", y = "Number of Cases\n") +
     ggplot2::ggtitle(paste("Daily New Cases In", country), subtitle = paste("From", fromDate, "To", toDate)) +
+    # ggplot2::theme(axis.text.x=ggplot2::element_text(angle=45, hjust=1)) +
     ggplot2::theme_bw()
 }
 
-# plotCountryTimeline(c("2020-1-1", "2020-10-29"), "Iran")
+# plotCountryTimeline(c("2020-6-1", "2020-8-13"), "Iran")
+# timeSeriesFull %>%
+#   dplyr::group_by(Region) %>%
+#   dplyr::count() -> tmp
 
 .getDateRange <- function(dateRange, firstDay, lastDay){
   # Throw exception if dateRange wasn't in correct format

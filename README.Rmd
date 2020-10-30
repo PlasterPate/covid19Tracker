@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# covid19Tracker
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of covid19Tracker is to facilitate exploration of Coronavirus disease (COVID-19) dataset. The dataset is provided by [JHU CSSE COVID-19 Data](https://github.com/CSSEGISandData/COVID-19) and is updated everyday.
+
+The dataset includes new cases, cumulative cases, new deaths and cumulative deaths for each day. It also contains geographical coordinates(Lat,Long) for each country.
+
+This package provide functions to:
+
++ View full dataset in a tidy format
++ Plot total cases between a selected period of time on the world map
++ Plot daily cases of a specific country between a selected period of time
+
+## Installation
+
+<!-- You can install the released version of covid19Tracker from [CRAN](https://CRAN.R-project.org) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("covid19Tracker") -->
+<!-- ``` -->
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("PlasterPate/covid19Tracker")
+```
+## Examples
+
+### Getting data
+
+```{r example1}
+library(covid19Tracker)
+dataset <- fetchData()
+head(dataset)
+```
+
+### Visualising data
+```{r echo=FALSE}
+options(scipen = 999)
+```
+
+```{r example2, message=FALSE, warning=FALSE, error=FALSE}
+library(covid19Tracker)
+plotWorldMap(dateRange = c("2020-09-01", "2020-09-30"), type = "Confirmed")
+```
+
+```{r example3}
+library(covid19Tracker)
+plotCountryTimeline(dateRange = c("2020-01-01", "2020-12-29"), country = "Iran")
+```
+
+
+
+

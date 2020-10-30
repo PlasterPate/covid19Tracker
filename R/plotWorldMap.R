@@ -65,7 +65,7 @@ plotWorldMap <- function(dateRange, type){
   # Plot choropleth map of the world based on type of casees
   log_n = as.integer(log(max(worldData[[type]]), base = 10)) + 1
   log_n = max(log_n, 6)
-  print(log_n)
+
   ggplot2::ggplot() +
     ggplot2::geom_sf(data = worldData, ggplot2::aes(fill = !!ggplot2::sym(type))) +
     ggplot2::scale_fill_stepsn(colors = c("white", "yellow", "red"), show.limits = T,
