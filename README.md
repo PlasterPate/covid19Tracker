@@ -63,14 +63,12 @@ head(dataset)
 ### Visualizing data
 
 ``` r
-library(covid19Tracker)
-plotWorldMap(dateRange = c("2020-09-01", "2020-09-30"), type = "Confirmed")
+plotWorldMap(dateRange = c("2020-09-01", "2020-10-30"), type = "Confirmed")
 ```
 
 <img src="man/figures/README-example2-1.png" width="100%" />
 
 ``` r
-library(covid19Tracker)
 plotCountryTimeline(dateRange = c("2020-01-01", "2020-12-29"), country = "Iran")
 ```
 

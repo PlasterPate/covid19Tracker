@@ -4,7 +4,7 @@ Title: Track coronavirus(COVID-19) cases all over the world
 Version: 0.1.0
 Authors@R: c(person("Alimohammad", "Movahedian", email = "am.movahedian1998@gmail.com", role = c("cre","aut")))
 Description: Daily track and plot of coronavirus reported cases and deaths around the world
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/PlasterPate/covid19Tracker

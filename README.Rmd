@@ -57,13 +57,11 @@ head(dataset)
 options(scipen = 999)
 ```
 
-```{r example2, message=FALSE, warning=FALSE, error=FALSE}
-library(covid19Tracker)
-plotWorldMap(dateRange = c("2020-09-01", "2020-09-30"), type = "Confirmed")
+```{r example2, message=FALSE, warning=FALSE, error=FALSE, fig.width=10}
+plotWorldMap(dateRange = c("2020-09-01", "2020-10-30"), type = "Confirmed")
 ```
 
 ```{r example3}
-library(covid19Tracker)
 plotCountryTimeline(dateRange = c("2020-01-01", "2020-12-29"), country = "Iran")
 ```
 
