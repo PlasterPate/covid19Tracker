@@ -1,0 +1,71 @@
+---
+title: "How to use covid19Tracker"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{covid19Tracker}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(covid19Tracker)
+```
+
+```{r echo=FALSE}
+options(scipen = 999)
+```
+
+## Geting Data
+#### You can get full data by simply calling *fetchData()*. it returns a dataframe. Each row contains information of a single country in a single day.
+
+
+#### Columns are:
+
++ **Region**: Name of the country
++ **Date**: Day of observation. Date is in format "yyyy-mm-dd" or "yyyy/mm/dd"
++ **CumConfirmed**: Total number of confirmed cases until this day
++ **Confirmed**: Number of new confirmed cases in this day
++ **CumDeath**: Total number of death cases until this day
++ **Death**: Number of new death cases in this day
++ **Lat**: Latitude of the country on map
++ **Long**: Longitude of the country on map
+      
+```{r fetchData}
+dataset <- fetchData()
+tail(dataset)
+```
+
+#### You can view list of all countrie that you can pass to plotCountryTimeline()
+
+```{r countries}
+unique(dataset$Region)
+```
+      
+## Visualizing Data 
+#### You can plot a choropleth map of world with *plotWorldMap()*. This function has two arguments:
+
+* **dateRange**: A vector of length 1 or 2 containing date strings. If you pass one date, a plot is drawn for that specific day. If you pass two dates, a plot is drawn for days between these two day.(first and last day wich are passed, are included). Proper formats of date is "yyyy-mm-dd" and "yyyy/mm/dd"
+
+* **type**: A string indicating the case of infected person. Can be one of "Confirmed" or "Death"
+
+#### An example with one date
+```{r world1, message=FALSE, warning=FALSE, error=FALSE, fig.width=7}
+dateRange = c("2020-08-23")
+type = "Death"
+plotWorldMap(dateRange, type)
+```
+ 
+#### An example with two dates
+```{r world2, message=FALSE, warning=FALSE, error=FALSE, fig.width=7}
+dateRange = c("2020-08-23", "2020-08-24")
+type = "Confirmed"
+plotWorldMap(dateRange, type)
+```
+      

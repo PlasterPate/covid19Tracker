@@ -27,4 +27,7 @@ Imports:
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

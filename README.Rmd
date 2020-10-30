@@ -25,8 +25,8 @@ The dataset includes new cases, cumulative cases, new deaths and cumulative deat
 This package provide functions to:
 
 + View full dataset in a tidy format
-+ Plot total cases between a selected period of time on the world map
-+ Plot daily cases of a specific country between a selected period of time
++ Plot total cases in a selected period of time on the world map
++ Plot daily cases of a specific country in a selected period of time
 
 ## Installation
 
@@ -52,7 +52,7 @@ dataset <- fetchData()
 head(dataset)
 ```
 
-### Visualising data
+### Visualizing data
 ```{r echo=FALSE}
 options(scipen = 999)
 ```

@@ -19,9 +19,8 @@ coordinates(Lat,Long) for each country.
 This package provide functions to:
 
   - View full dataset in a tidy format
-  - Plot total cases between a selected period of time on the world map
-  - Plot daily cases of a specific country between a selected period of
-    time
+  - Plot total cases in a selected period of time on the world map
+  - Plot daily cases of a specific country in a selected period of time
 
 ## Installation
 
@@ -61,7 +60,7 @@ head(dataset)
 #> 6 Afghanistan 2020-01-27            0         0        0     0  33.9  67.7
 ```
 
-### Visualising data
+### Visualizing data
 
 ``` r
 library(covid19Tracker)
