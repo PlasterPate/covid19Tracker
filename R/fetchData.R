@@ -51,4 +51,5 @@ fetchData <- function(){
     dplyr::relocate(Lat, .after = Death) %>%
     dplyr::relocate(Long, .after = Lat)-> timeSeries
 }
-?fetchData
+
+

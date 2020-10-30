@@ -2,5 +2,6 @@
 
 export("%>%")
 export(fetchData)
+export(plotCountryTimeline)
 export(plotWorldMap)
 importFrom(magrittr,"%>%")
